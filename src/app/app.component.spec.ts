@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Cadastro de proposta!');
+    expect(compiled.getElementById('label_titulo').textContent).toContain('Cadastro de proposta!');
   });
 });

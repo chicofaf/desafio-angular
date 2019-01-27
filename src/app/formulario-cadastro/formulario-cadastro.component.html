@@ -1,0 +1,91 @@
+<div class="page-header" style='width:600px; margin: 0 auto; margin-top: 30px'>
+    <h1>Cadastro de Proposta
+        <small>
+            <br>Prencha os dados do cliente para cadastrar uma nova proposta de crédito
+        </small>
+    </h1>
+</div>
+<form style='width:600px; margin: 0 auto; margin-top: 30px' #proposta="ngForm" (ngSubmit)="salvar()" >
+    <div class="form-group">
+        <label for="exampleInputEmail1">Nome</label>
+        <input [(ngModel)]="proposta.nome" type="text" class="form-control" id="exampleInputEmail1" placeholder="nome">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">CPF</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="CPF">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputPassword1">Idade</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="idade">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputPassword1">Sexo</label>
+        <select class="form-control" id="sexo">
+            <option>Masculino</option>
+            <option>Feminino</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputPassword1">Estado Civil</label>
+        <select name="estado_civil" class="form-control" id="estado_civil">
+            <option value="0">Solteiro</option>
+            <option value="1">Casado</option>
+            <option value="2">Separado</option>
+            <option value="3">Divorciado</option>
+            <option value="4">Viúvo</option>
+            <option value="5">Amasiado</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputPassword1">Estado no qual reside</label>
+        <select name="estados" class="form-control" id="estado_residencia">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputPassword1">Quantidade de Dependentes</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="dependentes">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputPassword1">Renda</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="renda">
+    </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Clique em mim</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
