@@ -62,7 +62,7 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "desafio-angular:build:production"
+              "browserTarget": "desafio-angular:build:production"              
             }
           }
         },
