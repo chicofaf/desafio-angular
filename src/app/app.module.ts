@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule} from '@angular/core';
-import { FormsModule} from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,13 +8,16 @@ import { FormularioCadastroComponent } from './formulario-cadastro/formulario-ca
 import { HttpClientModule } from '@angular/common/http';
 import { ListaPropostaComponent } from './lista-proposta/lista-proposta.component';
 
+import { AlertComponent } from './_directives/index';
+import { AlertService } from './_services/index';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioCadastroComponent,
     ListaPropostaComponent,
-    
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,7 @@ import { ListaPropostaComponent } from './lista-proposta/lista-proposta.componen
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
