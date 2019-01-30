@@ -1,24 +1,28 @@
 <div style="margin-left: 40px">
-<div class="row">
-<form class="navbar-form navbar-left" #busca="ngForm" (ngSubmit)="pesquisarPorCpf(busca)">
-    <p>   Digite um CPF para pesquisar<br></p>
-  <div class="form-group">
-    <input name="cpf" ngModel type="text" class="form-control" placeholder="cpf">
+  <div class="row">
+    <form class="navbar-form navbar-left" #busca="ngForm" (ngSubmit)="pesquisarPorCpf(busca)">
+      <p> Digite um CPF para pesquisar<br></p>
+      <div class="form-group">
+        <input name="cpf" ngModel type="text" class="form-control" placeholder="cpf">
+      </div>
+      <button style="margin-left: 10px;" type="submit" class="btn btn-primary">Pesquisar</button>
+    </form>
   </div>
-  <button type="submit" class="btn btn-default">Pesquisar</button>
-</form>
-</div>
 
-<div class="row" *ngIf="resultado_pesquisa" style="margin-left: 10px">
-    NOME: {{resultado_pesquisa.nome}}<br>
-    CPF: {{resultado_pesquisa.cpf}}<br>
-    IDADE: {{resultado_pesquisa.idade}}<br>
-    SEXO: {{resultado_pesquisa.sexo}}<br>
-    ESTADO_CIVIL: {{resultado_pesquisa.estado_civil}}<br>
-    ESTADO: {{resultado_pesquisa.estado}}<br>
-    DEPENDENTES: {{resultado_pesquisa.dependentes}}<br>
-    RENDA: {{resultado_pesquisa.renda}}<br>
-    RESULTADO DA ANÁLISE: {{resultado_pesquisa.resultado_analise}}<br>
-    LIMITE: {{resultado_pesquisa.limte}}
-</div>
+  <div class="row" *ngIf="resultado_pesquisa" style="margin-top: 15px;">
+    <div class="panel panel-primary" style="margin-left: 15px; width:600px">
+      <div style="margin-left: 15px;margin-top: 15px;margin-bottom: 15px;">
+        NOME: {{resultado_pesquisa.nome}}<br>
+        CPF: {{resultado_pesquisa.cpf}}<br>
+        IDADE: {{resultado_pesquisa.idade}}<br>
+        SEXO: {{resultado_pesquisa.sexo}}<br>
+        ESTADO CIVIL: {{resultado_pesquisa.estado_civil}}<br>
+        ESTADO: {{resultado_pesquisa.estado}}<br>
+        DEPENDENTES: {{resultado_pesquisa.dependentes}}<br>
+        RENDA: {{resultado_pesquisa.renda}}<br>
+        RESULTADO DA ANÁLISE: {{resultado_pesquisa.resultado_analise}}<br>
+        LIMITE: {{resultado_pesquisa.limite}}
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , ViewChild} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -6,17 +6,13 @@ import { HttpClient } from '@angular/common/http';
     templateUrl: './formulario-cadastro.component.html',
 })
 export class FormularioCadastroComponent {
+    @ViewChild('proposta') formValues;
     constructor(private http: HttpClient) {
     }
     salvar = (proposta) => {
-        console.log(proposta);
-        //this.http.get('http://localhost:8080/backend/proposta').subscribe(data => {
-           // console.log(data);
-        //});
-
         this.http.post('/api/backend/proposta/create', {proposta: proposta.value}).subscribe(
             res => {
-                console.log(res);
+                this.formValues.resetForm();
             },
             err => {
                 console.log("Error occured");
